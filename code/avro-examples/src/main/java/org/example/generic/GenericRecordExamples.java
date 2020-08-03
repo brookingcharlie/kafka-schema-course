@@ -16,14 +16,14 @@ import java.io.IOException;
 
 public class GenericRecordExamples {
     public static void main(String[] args) {
-        Schema schema = createParser();
+        Schema schema = createSchema();
         GenericRecord customer = createCustomer(schema);
         File file = new File("customer-generic.avro");
         writeToFile(customer, file);
         readFromFile(file);
     }
 
-    private static Schema createParser() {
+    private static Schema createSchema() {
         Parser parser = new Parser();
         return parser.parse(
             "{\n" +

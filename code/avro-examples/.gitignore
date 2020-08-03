@@ -2,3 +2,4 @@
 /target/
 /customer-generic.avro
 /customer-specific.avro
+/customer-reflected.avro

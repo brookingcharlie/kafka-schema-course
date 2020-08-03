@@ -19,18 +19,17 @@ public class SpecificRecordExamples {
         readFromFile(file);
     }
 
-    private static void readFromFile(File file) {
-        final DatumReader<Customer> datumReader = new SpecificDatumReader<>(Customer.class);
-        try (DataFileReader<Customer> fileReader = new DataFileReader<>(file, datumReader)) {
-            System.out.println("Reading our specific record");
-            while (fileReader.hasNext()) {
-                Customer readCustomer = fileReader.next();
-                System.out.println(readCustomer.toString());
-                System.out.println("First name: " + readCustomer.getFirstName());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    private static Customer createCustomer() {
+        Customer.Builder customerBuilder = Customer.newBuilder();
+        customerBuilder.setAge(25);
+        customerBuilder.setFirstName("John");
+        customerBuilder.setLastName("Doe");
+        customerBuilder.setHeight(175.5f);
+        customerBuilder.setWeight(80.5f);
+        customerBuilder.setAutomatedEmail(false);
+        Customer customer = customerBuilder.build();
+        System.out.println(customer);
+        return customer;
     }
 
     private static void writeToFile(Customer customer, File file) {
@@ -44,16 +43,17 @@ public class SpecificRecordExamples {
         }
     }
 
-    private static Customer createCustomer() {
-        Customer.Builder customerBuilder = Customer.newBuilder();
-        customerBuilder.setAge(25);
-        customerBuilder.setFirstName("John");
-        customerBuilder.setLastName("Doe");
-        customerBuilder.setHeight(175.5f);
-        customerBuilder.setWeight(80.5f);
-        customerBuilder.setAutomatedEmail(false);
-        Customer customer = customerBuilder.build();
-        System.out.println(customer);
-        return customer;
+    private static void readFromFile(File file) {
+        final DatumReader<Customer> datumReader = new SpecificDatumReader<>(Customer.class);
+        try (DataFileReader<Customer> fileReader = new DataFileReader<>(file, datumReader)) {
+            System.out.println("Reading our specific record");
+            while (fileReader.hasNext()) {
+                Customer readCustomer = fileReader.next();
+                System.out.println(readCustomer.toString());
+                System.out.println("First name: " + readCustomer.getFirstName());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
