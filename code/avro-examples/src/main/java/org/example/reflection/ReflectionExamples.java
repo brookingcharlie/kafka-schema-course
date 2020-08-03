@@ -15,11 +15,19 @@ import java.io.IOException;
 
 public class ReflectionExamples {
     public static void main(String[] args) {
-        Schema schema = ReflectData.get().getSchema(ReflectedCustomer.class);
-        ReflectedCustomer customer = new ReflectedCustomer("Bill", "Clark", "The Rocket");
+        Schema schema = createSchema();
+        ReflectedCustomer customer = createCustomer();
         File file = new File("customer-reflected.avro");
         writeToFile(schema, customer, file);
         readFromFile(file);
+    }
+
+    private static Schema createSchema() {
+        return ReflectData.get().getSchema(ReflectedCustomer.class);
+    }
+
+    private static ReflectedCustomer createCustomer() {
+        return new ReflectedCustomer("Bill", "Clark", "The Rocket");
     }
 
     private static void writeToFile(Schema schema, ReflectedCustomer customer, File file) {
