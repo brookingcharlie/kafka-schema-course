@@ -3,3 +3,5 @@
 /customer-generic.avro
 /customer-specific.avro
 /customer-reflected.avro
+/customerV1.avro
+/customerV2.avro
