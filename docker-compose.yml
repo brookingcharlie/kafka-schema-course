@@ -3,6 +3,7 @@ version: '2'
 services:
   kafka-cluster:
     image: landoop/fast-data-dev:2.5.0
+    container_name: kafka-cluster
     environment:
       ADV_HOST: 127.0.0.1
       RUNTESTS: 0                 # Disable Running tests so the cluster starts faster
