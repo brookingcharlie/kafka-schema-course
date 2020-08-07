@@ -8,7 +8,12 @@ Avro code examples:
 * [Avro Tools](code/avro-tools/)
 * [Schema evolution](code/avro-examples/src/main/java/org/example/evolution/EvolutionExamples.java)
 
-Running the Kafka and Schema Registry:
+Kafka Avro code examples:
+
+* [Kafka Avro Producer](code/kafka-avro-v1/src/main/java/KafkaAvroProducerV1.java)
+* [Kafka Avro Consumer](code/kafka-avro-v1/src/main/java/KafkaAvroConsumerV1.java)
+
+Running Kafka and Schema Registry:
 
 ```
 docker-compose up -d
