@@ -1,6 +1,6 @@
 # Notes on Kafka Schema Registry course
 
-Avro Java code examples:
+Avro Java examples:
 
 * [GenericRecord: create everything dynamically](code/avro-examples/src/main/java/org/example/generic/GenericRecordExamples.java)
 * [SpecificRecord: code-generate Java classes from an Avro schema](code/avro-examples/src/main/java/org/example/specific/SpecificRecordExamples.java)

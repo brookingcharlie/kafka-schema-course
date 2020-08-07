@@ -1,4 +1,4 @@
-package org.example.generic;
+package com.example.generic;
 
 import org.apache.avro.Schema;
 import org.apache.avro.Schema.Parser;

@@ -1,4 +1,4 @@
-package org.example.evolution;
+package com.example.evolution;
 
 import com.example.CustomerV1;
 import com.example.CustomerV2;

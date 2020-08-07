@@ -1,4 +1,4 @@
-package org.example.reflection;
+package com.example.reflection;
 
 import org.apache.avro.reflect.Nullable;
 

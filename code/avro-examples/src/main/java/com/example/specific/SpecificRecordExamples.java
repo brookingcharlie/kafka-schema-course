@@ -1,4 +1,4 @@
-package org.example.specific;
+package com.example.specific;
 
 import com.example.Customer;
 import org.apache.avro.file.DataFileReader;

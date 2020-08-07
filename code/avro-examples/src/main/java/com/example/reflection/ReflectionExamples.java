@@ -1,4 +1,4 @@
-package org.example.reflection;
+package com.example.reflection;
 
 import org.apache.avro.Schema;
 import org.apache.avro.file.CodecFactory;
