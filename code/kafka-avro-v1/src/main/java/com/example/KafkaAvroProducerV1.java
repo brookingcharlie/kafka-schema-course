@@ -1,4 +1,5 @@
-import com.example.Customer;
+package com.example;
+
 import io.confluent.kafka.serializers.KafkaAvroSerializer;
 import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.KafkaProducer;
@@ -18,7 +19,7 @@ public class KafkaAvroProducerV1 {
         properties.setProperty("value.serializer", KafkaAvroSerializer.class.getName());
         properties.setProperty("schema.registry.url", "http://127.0.0.1:8081");
 
-        KafkaProducer<String, Customer> kafkaProducer = new KafkaProducer<String, Customer>(properties);
+        KafkaProducer<String, Customer> kafkaProducer = new KafkaProducer<>(properties);
         String topic = "customer-avro";
         Customer customer = Customer.newBuilder()
                 .setFirstName("John")
