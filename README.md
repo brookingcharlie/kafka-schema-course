@@ -4,9 +4,9 @@
 
 Avro Java examples:
 
-* [GenericRecord: create everything dynamically](code/avro-examples/src/main/java/org/example/generic/GenericRecordExamples.java)
-* [SpecificRecord: code-generate Java classes from an Avro schema](code/avro-examples/src/main/java/org/example/specific/SpecificRecordExamples.java)
-* [Reflection: create an Avro schema from Java classes](code/avro-examples/src/main/java/org/example/reflection/ReflectionExamples.java)
+* [GenericRecord](code/avro-examples/src/main/java/org/example/generic/GenericRecordExamples.java): create everything dynamically
+* [SpecificRecord](code/avro-examples/src/main/java/org/example/specific/SpecificRecordExamples.java): code-generate Java classes from an Avro schema
+* [Reflection](code/avro-examples/src/main/java/org/example/reflection/ReflectionExamples.java): create an Avro schema from Java classes
 * [Schema evolution](code/avro-examples/src/main/java/org/example/evolution/EvolutionExamples.java)
 
 Avro Tools [example scripts](code/avro-tools/).
